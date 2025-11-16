@@ -1,16 +1,20 @@
 // App.jsx
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import BlackHatMEA from './JPOevent';
-import Workshops from './pages/workshops';
+
+// Lazy load components
+const BlackHatMEA = lazy(() => import('./JPOevent'));
+const Workshops = lazy(() => import('./pages/workshops'));
 
 function App() {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<BlackHatMEA />} />
-        <Route path="/workshops" element={<Workshops />} />
-      </Routes>
+      <Suspense fallback={null}>
+        <Routes>
+          <Route path="/" element={<BlackHatMEA />} />
+          <Route path="/workshops" element={<Workshops />} />
+        </Routes>
+      </Suspense>
     </Router>
   );
 }

@@ -1,5 +1,7 @@
 // BlackHatMEA.jsx
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
+
+// Import sections directly (remove lazy loading for better initial load)
 import Navigation from './components/Navigation';
 import HeroSection from './sections/HeroSection';
 import AboutSection from './sections/AboutSection';
@@ -19,13 +21,15 @@ export default function BlackHatMEA() {
     { name: 'Sponsor 4', logo: '/sponsor4.jpg' },
   ];
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+  // Memoized scroll handler
+  const handleScroll = useCallback(() => {
+    setScrolled(window.scrollY > 50);
   }, []);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [handleScroll]);
 
   useEffect(() => {
     const carouselInterval = setInterval(() => {
