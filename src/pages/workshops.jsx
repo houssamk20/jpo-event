@@ -105,7 +105,7 @@ const Workshops = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false, amount: 0.1 }}
-                transition={{ duration: 0.3, delay: index * 0.05 }}
+                transition={{ duration: 0.2, delay: index * 0.05 }}
                 className="
                   relative
                   rounded-lg xs:rounded-xl sm:rounded-2xl
@@ -120,7 +120,7 @@ const Workshops = () => {
                   border-white/20
                   hover:border-cyan-400/50
                   transition-all
-                  duration-300
+                  duration-200
                 "
               >
                 {/* Image - Always Visible */}
@@ -132,7 +132,7 @@ const Workshops = () => {
                     h-full
                     object-cover
                     transition-transform
-                    duration-500
+                    duration-400
                     group-hover:scale-110
                   "
                   onError={(e) => {
