@@ -132,7 +132,7 @@ const Workshops = () => {
                     h-full
                     object-cover
                     transition-transform
-                    duration-400
+                    duration-300
                     group-hover:scale-110
                   "
                   onError={(e) => {
@@ -151,7 +151,7 @@ const Workshops = () => {
                   lg:group-hover:opacity-100
                   opacity-100
                   transition-all
-                  duration-300
+                  duration-200
                   flex
                   flex-col
                   justify-center
