@@ -38,22 +38,6 @@ const Workshops = () => {
       className: "Design Mastery",
       formateur: "Sarah Chen",
     },
-    {
-      src: "/images/test5.png",
-      title: "Cloud Computing (AWS/Azure)",
-      description:
-        "Get hands-on experience deploying, scaling, and managing applications in major cloud environments.",
-      className: "Cloud Infrastructure",
-      formateur: "Michael Thompson",
-    },
-    {
-      src: "/images/test6.png",
-      title: "Agile Project Management (Scrum)",
-      description:
-        "Master the Scrum framework, lead daily stand-ups, and deliver complex projects efficiently.",
-      className: "Project Leadership",
-      formateur: "Lisa Johnson",
-    },
   ];
 
   const handleInscription = () => {
