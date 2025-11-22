@@ -1,35 +1,34 @@
 // sections/HeroSection.jsx
-import React from 'react';
-import { ChevronUp } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { ChevronUp } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   const scrollToOverview = () => {
     const overviewSection = document.getElementById('overview');
     if (overviewSection) {
       overviewSection.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
+        behavior: 'smooth'
       });
     }
   };
 
   return (
     <section id="overview" className="relative min-h-screen flex items-center overflow-hidden pt-16">
-      {/* Video Background - Optimized */}
+      {/* Optimized Video Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-black/50 z-10"></div>
+        <div className="absolute inset-0 bg-black/60 z-10"></div>
         <video
           autoPlay
           loop
           muted
           playsInline
           preload="metadata"
-          className="absolute inset-0 w-full h-full object-cover opacity-40 xs:opacity-45 sm:opacity-50"
+          className="absolute inset-0 w-full h-full object-cover opacity-50"
           aria-label="Background video"
         >
           <source src="/jposoon.mp4" type="video/mp4" />
-          {/* Fallback image for browsers that don't support video */}
+          {/* Fallback for unsupported browsers */}
           <img 
             src="/video-poster.jpg" 
             alt="JPO Conference Background" 
@@ -37,29 +36,28 @@ const HeroSection = () => {
             loading="eager"
           />
         </video>
-        
-        {/* Mobile-specific overlay */}
-        <div className="absolute inset-0 lg:hidden bg-black/30 z-5"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div className="relative z-10 w-full px-4 md:px-8">
         {/* Desktop Layout */}
         <div className="hidden lg:block">
           <div className="max-w-2xl -ml-32">
             <img 
               src="/ISIMG.png" 
               alt="JPO Logo" 
-              className="h-64 md:h-72 lg:h-80 w-auto max-w-full"
+              className="h-64 md:h-72 lg:h-80 w-auto max-w-full ml-29 object-contain"
               loading="eager"
               width="800"
               height="400"
+              decoding="async"
             />
             
-            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 ml-20 mt-6">
+            <div className="flex gap-4 ml-45 mt-6">
               <Link 
                 to="/workshops"
                 className="bg-cyan-400 hover:bg-cyan-300 text-black px-10 py-5 md:px-14 md:py-6 font-black text-xl md:text-2xl transition-colors uppercase tracking-wider text-center rounded-lg inline-block focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
                 aria-label="Register for workshops"
+                prefetch={true}
               >
                 Register Now
               </Link>
@@ -69,9 +67,9 @@ const HeroSection = () => {
 
         {/* Mobile & Tablet Layout */}
         <div className="lg:hidden">
-          <div className="flex flex-col items-center justify-center text-center w-full px-4">
+          <div className="flex flex-col items-center justify-center text-center w-full">
             {/* Logo Container */}
-            <div className="w-full max-w-[280px] xs:max-w-[320px] sm:max-w-[380px] mb-6 xs:mb-8 sm:mb-10">
+            <div className="w-full max-w-xs md:max-w-sm mb-8">
               <img 
                 src="/ISIMG.png" 
                 alt="JPO Logo" 
@@ -79,15 +77,17 @@ const HeroSection = () => {
                 loading="eager"
                 width="400"
                 height="200"
+                decoding="async"
               />
             </div>
             
             {/* Button Container */}
-            <div className="w-full max-w-[240px] xs:max-w-[280px] sm:max-w-[320px] ml-4 xs:ml-6 sm:ml-8">
+            <div className="w-full max-w-xs">
               <Link 
                 to="/workshops"
-                className="w-full bg-cyan-400 hover:bg-cyan-300 active:bg-cyan-500 text-black px-7 py-4 xs:px-8 xs:py-4.5 sm:px-10 sm:py-5 font-black text-lg xs:text-xl sm:text-2xl transition-all duration-200 uppercase tracking-wider transform hover:scale-105 active:scale-95 rounded-lg inline-block text-center focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
+                className="w-full bg-cyan-400 hover:bg-cyan-300 text-black px-8 py-4 md:px-10 md:py-5 font-black text-lg md:text-xl transition-all duration-200 uppercase tracking-wider rounded-lg inline-block text-center focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
                 aria-label="Register for workshops"
+                prefetch={true}
               >
                 Register Now
               </Link>
@@ -96,16 +96,16 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Fixed Back to Overview Arrow Button */}
+      {/* Optimized Back to Top Button */}
       <button
         onClick={scrollToOverview}
-        className="fixed right-5 xs:right-6 sm:right-8 md:right-10 bottom-5 xs:bottom-6 sm:bottom-8 md:bottom-10 z-50 bg-cyan-400 hover:bg-cyan-300 text-black p-3 xs:p-3.5 sm:p-4 rounded-full shadow-xl hover:shadow-cyan-400/50 transition-all duration-200 transform hover:scale-110 active:scale-95 group focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
+        className="fixed right-4 bottom-4 z-50 bg-cyan-400 hover:bg-cyan-300 text-black p-3 rounded-full shadow-lg transition-all duration-200 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
         aria-label="Back to top"
       >
-        <ChevronUp className="w-6 h-6 xs:w-7 xs:h-7 sm:w-8 sm:h-8 transition-transform group-hover:-translate-y-0.5" />
+        <ChevronUp className="w-6 h-6" />
       </button>
     </section>
   );
 };
 
-export default HeroSection;
+export default React.memo(HeroSection);
