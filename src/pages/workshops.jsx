@@ -58,7 +58,7 @@ const Workshops = () => {
 
   const handleInscription = () => {
     // Open Google Forms in a new tab with the workshop title as reference
-    const googleFormsUrl = "https://forms.gle/8QtmeWPVvMfF2Dp48";
+    const googleFormsUrl = "https://forms.gle/1VsZmLsQSieGhAnPA";
     
     // You can optionally pass the workshop title as a parameter
     // const urlWithParams = `${googleFormsUrl}?entry.123456789=${encodeURIComponent(formationTitle)}`;
