@@ -11,6 +11,7 @@ const Workshops = () => {
       description: "Master ethical hacking, threat detection, and advanced network defense strategies.",
       className: "Advanced Security",
       formateur: "Dr. Ahmed Ben Salah",
+      formLink: "https://forms.gle/cybersecurity123" // Replace with actual form link
     },
     {
       src: "/images/test2.png",
@@ -18,6 +19,7 @@ const Workshops = () => {
       description: "Dive deep into modern JS (ES6+), React Hooks, and state management.",
       className: "Web Development",
       formateur: "Prof. Maria Rodriguez",
+      formLink: "https://forms.gle/javascript456" // Replace with actual form link
     },
     {
       src: "/images/test3.png",
@@ -25,6 +27,7 @@ const Workshops = () => {
       description: "Learn Python, Pandas, NumPy to build predictive models and analyze datasets.",
       className: "Data Analytics",
       formateur: "Dr. James Wilson",
+      formLink: "https://forms.gle/datascience789" // Replace with actual form link
     },
     {
       src: "/images/test4.png",
@@ -32,12 +35,12 @@ const Workshops = () => {
       description: "Get hands-on experience deploying and managing applications in cloud environments.",
       className: "Cloud Infrastructure",
       formateur: "Michael Thompson",
+      formLink: "https://forms.gle/cloudcomputing012" // Replace with actual form link
     }
   ];
 
-  const handleInscription = () => {
-    const googleFormsUrl = "https://forms.gle/8QtmeWPVvMfF2Dp48";
-    window.open(googleFormsUrl, '_blank', 'noopener,noreferrer');
+  const handleInscription = (formLink) => {
+    window.open(formLink, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -163,7 +166,7 @@ const Workshops = () => {
                       </span>
                     </div>
                     <button
-                      onClick={() => handleInscription(card.title)}
+                      onClick={() => handleInscription(card.formLink, card.title)}
                       className="
                         bg-cyan-400
                         hover:bg-cyan-300
