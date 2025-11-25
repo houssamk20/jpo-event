@@ -3,24 +3,23 @@ import React from 'react';
 
 const PartnersSection = () => {
   const partners = [
+    { name: 'Partner 8', logo: '/artech.png' },
     { name: 'Partner 1', logo: '/cap.png' },
-    { name: 'Partner 2', logo: '/cyber.png' },
-    { name: 'Partner 3', logo: '/sof.png' },
-    { name: 'Partner 4', logo: '/p2.png' },
-    { name: 'Partner 5', logo: '/service.png' },
-    { name: 'Partner 6', logo: '/prest.png' },
-    { name: 'Partner 7', logo: '/quiz.png' },
-    { name: 'Partner 8', logo: '/sepj.png' },
-    { name: 'Partner 9', logo: '/artech.png' },
-    { name: 'Partner 10', logo: '/cap.png' },
-    { name: 'Partner 11', logo: '/cyber.png' },
-    { name: 'Partner 12', logo: '/sof.png' },
-    { name: 'Partner 13', logo: '/p2.png' },
-    { name: 'Partner 14', logo: '/service.png' },
-    { name: 'Partner 15', logo: '/prest.png' },
-    { name: 'Partner 16', logo: '/quiz.png' },
-    { name: 'Partner 17', logo: '/sepj.png' },
-    { name: 'Partner 18', logo: '/artech.png' },
+    { name: 'Partner 2', logo: '/sof.png' },
+    { name: 'Partner 3', logo: '/p2.png' },
+    { name: 'Partner 4', logo: '/service.png' },
+    { name: 'Partner 5', logo: '/prest.png' },
+    { name: 'Partner 6', logo: '/quiz.png' },
+    { name: 'Partner 7', logo: '/sepj.png' },
+    { name: 'Partner 8', logo: '/artech.png' },
+    { name: 'Partner 9', logo: '/cap.png' },
+    { name: 'Partner 10', logo: '/sof.png' },
+    { name: 'Partner 11', logo: '/p2.png' },
+    { name: 'Partner 12', logo: '/service.png' },
+    { name: 'Partner 13', logo: '/prest.png' },
+    { name: 'Partner 14', logo: '/quiz.png' },
+    { name: 'Partner 15', logo: '/sepj.png' },
+    { name: 'Partner 16', logo: '/artech.png' },
   ];
 
   return (
@@ -37,19 +36,18 @@ const PartnersSection = () => {
         </div>
 
         {/* Infinite Carousel */}
-        <div className="relative w-full overflow-hidden py-4">
-          <div className="flex animate-infinite-scroll space-x-12 md:space-x-16 lg:space-x-20">
+        <div className="mb-8 sm:mb-12 relative w-full overflow-hidden">
+          <div className="flex animate-infinite-scroll space-x-4 sm:space-x-6 md:space-x-8 lg:space-x-12 xl:space-x-16">
             {/* Double the partners array for seamless looping */}
             {[...partners, ...partners].map((partner, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 w-48 h-32 sm:w-56 sm:h-36 md:w-64 md:h-40 lg:w-72 lg:h-44 bg-transparent rounded-lg flex flex-col items-center justify-center"
+                className="flex-shrink-0 w-20 h-16 xs:w-24 xs:h-20 sm:w-28 sm:h-24 md:w-32 md:h-28 lg:w-40 lg:h-32 xl:w-48 xl:h-36 2xl:w-56 2xl:h-40 bg-transparent rounded-lg flex items-center justify-center"
               >
                 <img 
                   src={partner.logo} 
                   alt={partner.name}
-                  className="w-40 h-20 sm:w-48 sm:h-24 md:w-56 md:h-28 lg:w-64 lg:h-32 object-contain p-2 filter brightness-0 invert opacity-80 hover:opacity-100 transition-opacity duration-300"
-                />
+                  className="w-full h-full object-contain p-1 sm:p-2"                />
                 
               </div>
             ))}
