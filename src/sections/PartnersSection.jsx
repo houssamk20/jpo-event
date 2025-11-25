@@ -24,7 +24,7 @@ const PartnersSection = () => {
 
   return (
     <section className="bg-black py-12 md:py-16 lg:py-20 border-t border-gray-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-4 xs:px-5 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
         {/* Section Header */}
         <div className="text-center mb-8 md:mb-12 lg:mb-16">
           <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black uppercase tracking-tight text-white mb-4">
