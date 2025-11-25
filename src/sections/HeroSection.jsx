@@ -2,6 +2,7 @@
 import React from "react";
 import { ChevronUp } from "lucide-react";
 import { Link } from "react-router-dom";
+import PartnersSection from "./PartnersSection";
 
 const HeroSection = () => {
   const scrollToOverview = () => {
@@ -14,6 +15,7 @@ const HeroSection = () => {
   };
 
   return (
+  <>
     <section id="overview" className="relative min-h-screen flex items-center overflow-hidden pt-16">
       {/* Optimized Video Background */}
       <div className="absolute inset-0">
@@ -43,12 +45,12 @@ const HeroSection = () => {
         <div className="hidden lg:block">
           <div className="max-w-2xl -ml-32">
             <img 
-              src="/ISIMG.png" 
+              src="/eventjpo.png" 
               alt="JPO Logo" 
-              className="h-64 md:h-72 lg:h-80 w-auto max-w-full ml-29 object-contain"
+              className="h-64 md:h-72 lg:h-80 w-auto max-w-full ml-29 "
               loading="eager"
-              width="800"
-              height="400"
+              width="900"
+              height="800"
               decoding="async"
             />
             
@@ -71,7 +73,7 @@ const HeroSection = () => {
             {/* Logo Container */}
             <div className="w-full max-w-xs md:max-w-sm mb-8">
               <img 
-                src="/ISIMG.png" 
+                src="/eventjpo.png" 
                 alt="JPO Logo" 
                 className="w-full h-auto object-contain"
                 loading="eager"
@@ -105,6 +107,9 @@ const HeroSection = () => {
         <ChevronUp className="w-6 h-6" />
       </button>
     </section>
+  {/* Our Partners Section */}
+      <PartnersSection />
+    </>
   );
 };
 

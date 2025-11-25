@@ -6,37 +6,33 @@ import { Link } from "react-router-dom";
 const Workshops = () => {
   const cards = [
     {
-      src: "/images/test1.png",
-      title: "Cyber Security Specialist",
-      description: "Master ethical hacking, threat detection, and advanced network defense strategies.",
+      src: "/workshop.png",
+      title: "Protected Consulting and exploring e-learning pathways with edX",
+      description: "discover the fundamentals of Protected Consulting, an approach centered on secure, structured, and ethical digital solutions for modern organizations",
       className: "Advanced Security",
-      formateur: "Dr. Ahmed Ben Salah",
+      formLink: "https://forms.gle/6iinMNNdGVwHNw7M6" // Replace with actual form link
+    },
+    {
+      src: "/symfony.png",
+      title: "Rapid Application Development",
+      description: "Learn to build robust web applications quickly using Symfony framework and best practices in modern web development.",
+      className: "Advanced Security",
+      formLink: "https://forms.gle/gMUWWn3XNSVuqNPE9" // Replace with actual form link
+    },
+    {
+      src: "/softskills.png",
+      title: "Le code Legend",
+      description: "Enhance your interpersonal skills, communication, and teamwork to excel in professional environments.",
+      className: "Advanced Security",
+      formLink: "https://forms.gle/ebU6nb2Qbh6DpBoQ7" // Replace with actual form link
+    },
+    {
+      src: "/workshop.png",
+      title: "Protected Consulting and exploring e-learning pathways with edX",
+      description: "discover the fundamentals of Protected Consulting, an approach centered on secure, structured, and ethical digital solutions for modern organizations",
+      className: "Advanced Security",
       formLink: "https://forms.gle/cybersecurity123" // Replace with actual form link
     },
-    {
-      src: "/images/test2.png",
-      title: "Advanced JavaScript & React",
-      description: "Dive deep into modern JS (ES6+), React Hooks, and state management.",
-      className: "Web Development",
-      formateur: "Prof. Maria Rodriguez",
-      formLink: "https://forms.gle/javascript456" // Replace with actual form link
-    },
-    {
-      src: "/images/test3.png",
-      title: "Data Science & Machine Learning",
-      description: "Learn Python, Pandas, NumPy to build predictive models and analyze datasets.",
-      className: "Data Analytics",
-      formateur: "Dr. James Wilson",
-      formLink: "https://forms.gle/datascience789" // Replace with actual form link
-    },
-    {
-      src: "/images/test4.png",
-      title: "Cloud Computing (AWS/Azure)",
-      description: "Get hands-on experience deploying and managing applications in cloud environments.",
-      className: "Cloud Infrastructure",
-      formateur: "Michael Thompson",
-      formLink: "https://forms.gle/cloudcomputing012" // Replace with actual form link
-    }
   ];
 
   const handleInscription = (formLink) => {
@@ -138,33 +134,17 @@ const Workshops = () => {
                 "
                 >
                   {/* Top Content */}
-                  <div className="flex-1 flex flex-col justify-center space-y-3">
-                    <h2 className="text-lg md:text-xl font-bold text-white line-clamp-2">
+                  <div className="flex-2 flex flex-col justify-center space-y-3">
+                    <h2 className="text-lg md:text-xl font-bold text-cyan-400 line-clamp-2">
                       {card.title}
                     </h2>
-                    <p className="text-gray-300 text-sm leading-relaxed line-clamp-3">
+                    <p className="text-gray-300 text-sm leading-relaxed line-clamp-3 font-bold">
                       {card.description}
                     </p>
                   </div>
 
                   {/* Bottom Content */}
                   <div className="space-y-2 pt-4">
-                    <div>
-                      <span className="text-cyan-400 font-semibold text-sm">
-                        Category:{" "}
-                      </span>
-                      <span className="text-white text-sm">
-                        {card.className}
-                      </span>
-                    </div>
-                    <div className="pb-2">
-                      <span className="text-cyan-400 font-semibold text-sm">
-                        Instructor:{" "}
-                      </span>
-                      <span className="text-white text-sm">
-                        {card.formateur}
-                      </span>
-                    </div>
                     <button
                       onClick={() => handleInscription(card.formLink, card.title)}
                       className="

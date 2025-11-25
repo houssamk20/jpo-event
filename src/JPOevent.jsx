@@ -1,9 +1,9 @@
 // BlackHatMEA.jsx
 import React, { useState, useEffect, useCallback } from 'react';
 
-// Import sections directly (remove lazy loading for better initial load)
+// Import sections directly
 import Navigation from './components/Navigation';
-import HeroSection from './sections/HeroSection';
+import HeroSection from './sections/HeroSection'; // Now includes PartnersSection
 import AboutSection from './sections/AboutSection';
 import WhyExhibitSection from './sections/WhyExhibitSection';
 import WhatToExpectSection from './sections/WhatToExpectSection';
@@ -15,10 +15,16 @@ export default function BlackHatMEA() {
   const [sponsorIndex, setSponsorIndex] = useState(0);
 
   const sponsors = [
-    { name: 'Sponsor 1', logo: '/sponsor1.jpg' },
-    { name: 'Sponsor 2', logo: '/sponsor2.jpg' },
-    { name: 'Sponsor 3', logo: '/sponsor3.jpg' },
-    { name: 'Sponsor 4', logo: '/sponsor4.jpg' },
+    { name: 'Sponsor 1', logo: '/cyber.png' },
+    { name: 'Sponsor 2', logo: '/forum.png' },
+    { name: 'Sponsor 3', logo: '/ubci.png' },
+    { name: 'Sponsor 4', logo: '/iiT.png' },
+    { name: 'Sponsor 5', logo: '/bochema.png' },
+    { name: 'Sponsor 6', logo: '/cyber.png' },
+    { name: 'Sponsor 7', logo: '/forum.png' },
+    { name: 'Sponsor 8', logo: '/ubci.png' },
+    { name: 'Sponsor 9', logo: '/iiT.png' },
+    { name: 'Sponsor 10', logo: '/bochema.png' },
   ];
 
   // Memoized scroll handler
@@ -46,7 +52,7 @@ export default function BlackHatMEA() {
         setMobileMenuOpen={setMobileMenuOpen} 
       />
       
-      <HeroSection />
+      <HeroSection /> {/* Now includes PartnersSection */}
       <AboutSection />
       <WhyExhibitSection />
       <WhatToExpectSection />
