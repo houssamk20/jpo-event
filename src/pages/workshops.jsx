@@ -31,7 +31,7 @@ const Workshops = () => {
       title: "Web development with React",
       description: "Master the fundamentals of web development using React, building dynamic and responsive user interfaces.",
       className: "Advanced Security",
-      formLink: "https://forms.gle/cybersecurity123" // Replace with actual form link
+      formLink: "https://forms.gle/gPUxvGEHxohs7qey8" // Replace with actual form link
     },
   ];
 
