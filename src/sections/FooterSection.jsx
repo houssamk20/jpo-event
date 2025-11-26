@@ -13,7 +13,7 @@ const FooterSection = ({ sponsors }) => {
         <SponsorsCarousel sponsors={sponsors} />
 
         <div className="border-t border-gray-800 pt-6 xs:pt-7 sm:pt-8 md:pt-10 text-center text-gray-500 text-xs xs:text-sm sm:text-base">
-          © JPO2025 HK11. All rights reserved.
+          © JPO2025 Created by Club IOT. All rights reserved.
         </div>
       </div>
     </footer>
