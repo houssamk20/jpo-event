@@ -3,27 +3,27 @@ import React from 'react';
 
 const PartnersSection = () => {
   const partners = [
-    { name: 'Partner 8', logo: '/artech.png' },
-    { name: 'Partner 1', logo: '/cap.png' },
-    { name: 'Partner 2', logo: '/sof.png' },
-    { name: 'Partner 2', logo: '/digi.png' },
-    { name: 'Partner 3', logo: '/p2.png' },
-    { name: 'Partner 3', logo: '/gomycode.png' },
-    { name: 'Partner 4', logo: '/service.png' },
-    { name: 'Partner 5', logo: '/prest.png' },
-    { name: 'Partner 6', logo: '/quiz.png' },
-    { name: 'Partner 7', logo: '/sepj.png' },
-    { name: 'Partner 8', logo: '/artech.png' },
-    { name: 'Partner 9', logo: '/cap.png' },
-    { name: 'Partner 10', logo: '/sof.png' },
-    { name: 'Partner 2', logo: '/digi.png' },
-    { name: 'Partner 11', logo: '/p2.png' },
-    { name: 'Partner 3', logo: '/gomycode.png' },
-    { name: 'Partner 12', logo: '/service.png' },
-    { name: 'Partner 13', logo: '/prest.png' },
-    { name: 'Partner 14', logo: '/quiz.png' },
-    { name: 'Partner 15', logo: '/sepj.png' },
-    { name: 'Partner 16', logo: '/artech.png' },
+    { name: 'Partner 1', logo: '/artech.png' },
+    { name: 'Partner 2', logo: '/cap.png' },
+    { name: 'Partner 3', logo: '/sof.png' },
+    { name: 'Partner 4', logo: '/digi.png' },
+    { name: 'Partner 5', logo: '/p2.png' },
+    { name: 'Partner 5', logo: '/gomycode.png' },
+    { name: 'Partner 6', logo: '/service.png' },
+    { name: 'Partner 7', logo: '/prest.png' },
+    { name: 'Partner 8', logo: '/quiz.png' },
+    { name: 'Partner 9', logo: '/sepj.png' },
+    { name: 'Partner 10', logo: '/artech.png' },
+    { name: 'Partner 11', logo: '/cap.png' },
+    { name: 'Partner 12', logo: '/sof.png' },
+    { name: 'Partner 13', logo: '/digi.png' },
+    { name: 'Partner 14', logo: '/p2.png' },
+    { name: 'Partner 15', logo: '/gomycode.png' },
+    { name: 'Partner 16', logo: '/service.png' },
+    { name: 'Partner 17', logo: '/prest.png' },
+    { name: 'Partner 18', logo: '/quiz.png' },
+    { name: 'Partner 19', logo: '/sepj.png' },
+    { name: 'Partner 20', logo: '/artech.png' },
   ];
 
   return (
@@ -76,23 +76,7 @@ const PartnersSection = () => {
         </div>
 
         {/* Static Grid for Smaller Screens */}
-        <div className="lg:hidden mt-12">
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 max-w-2xl mx-auto">
-            {partners.map((partner) => (
-              <div
-                key={partner.name}
-                className="bg-gray-800/30 rounded-xl p-4 hover:bg-gray-800/50 transition-all duration-300 border border-gray-700/50 flex flex-col items-center justify-center"
-              >
-                <img 
-                  src={partner.logo} 
-                  alt={partner.name}
-                  className="w-32 h-16 sm:w-36 sm:h-18 object-contain filter brightness-0 invert opacity-80 hover:opacity-100 transition-opacity duration-300"
-                />
-                
-              </div>
-            ))}
-          </div>
-        </div>
+        
       </div>
     </section>
   );
