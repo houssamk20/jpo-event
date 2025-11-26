@@ -6,30 +6,30 @@ import { Link } from "react-router-dom";
 const Workshops = () => {
   const cards = [
     {
-      src: "/workshop.png",
+      src: "/workshop.jpg",
       title: "Protected Consulting and exploring e-learning pathways with edX",
       description: "discover the fundamentals of Protected Consulting, an approach centered on secure, structured, and ethical digital solutions for modern organizations",
       className: "Advanced Security",
       formLink: "https://forms.gle/6iinMNNdGVwHNw7M6" // Replace with actual form link
     },
     {
-      src: "/symfony.png",
+      src: "/symfony.jpg",
       title: "Rapid Application Development",
       description: "Learn to build robust web applications quickly using Symfony framework and best practices in modern web development.",
       className: "Advanced Security",
       formLink: "https://forms.gle/gMUWWn3XNSVuqNPE9" // Replace with actual form link
     },
     {
-      src: "/softskills.png",
+      src: "/softskills.jpg",
       title: "Le code Legend",
       description: "Enhance your interpersonal skills, communication, and teamwork to excel in professional environments.",
       className: "Advanced Security",
       formLink: "https://forms.gle/ebU6nb2Qbh6DpBoQ7" // Replace with actual form link
     },
     {
-      src: "/workshop.png",
-      title: "Protected Consulting and exploring e-learning pathways with edX",
-      description: "discover the fundamentals of Protected Consulting, an approach centered on secure, structured, and ethical digital solutions for modern organizations",
+      src: "/goMyCode.jpg",
+      title: "Web development with React",
+      description: "Master the fundamentals of web development using React, building dynamic and responsive user interfaces.",
       className: "Advanced Security",
       formLink: "https://forms.gle/cybersecurity123" // Replace with actual form link
     },

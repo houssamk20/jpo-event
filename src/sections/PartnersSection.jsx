@@ -6,7 +6,9 @@ const PartnersSection = () => {
     { name: 'Partner 8', logo: '/artech.png' },
     { name: 'Partner 1', logo: '/cap.png' },
     { name: 'Partner 2', logo: '/sof.png' },
+    { name: 'Partner 2', logo: '/digi.png' },
     { name: 'Partner 3', logo: '/p2.png' },
+    { name: 'Partner 3', logo: '/gomycode.png' },
     { name: 'Partner 4', logo: '/service.png' },
     { name: 'Partner 5', logo: '/prest.png' },
     { name: 'Partner 6', logo: '/quiz.png' },
@@ -14,7 +16,9 @@ const PartnersSection = () => {
     { name: 'Partner 8', logo: '/artech.png' },
     { name: 'Partner 9', logo: '/cap.png' },
     { name: 'Partner 10', logo: '/sof.png' },
+    { name: 'Partner 2', logo: '/digi.png' },
     { name: 'Partner 11', logo: '/p2.png' },
+    { name: 'Partner 3', logo: '/gomycode.png' },
     { name: 'Partner 12', logo: '/service.png' },
     { name: 'Partner 13', logo: '/prest.png' },
     { name: 'Partner 14', logo: '/quiz.png' },
@@ -46,7 +50,6 @@ const PartnersSection = () => {
               >
                 <img 
                   src={partner.logo} 
-                  alt={partner.name}
                   className="w-full h-full object-contain p-1 sm:p-2"                />
                 
               </div>
